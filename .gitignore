@@ -8,4 +8,4 @@
 .local
 .cache
 .jupyter
-/tf_ev
+**/tf_env/
