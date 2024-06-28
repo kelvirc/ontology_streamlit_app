@@ -9,3 +9,4 @@
 .cache
 .jupyter
 **/tf_env/
+**/__pycache__/
