@@ -1,0 +1,4 @@
+embeddings {
+  tensor_name: "synonym_embeddings:0"
+  metadata_path: "C:\\Users\\Fuchs-Laptop\\ontology_streamlit_app\\app\\logs\\synonym_embeddings\\metadata.tsv"
+}
