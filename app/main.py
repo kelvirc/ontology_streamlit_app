@@ -70,7 +70,7 @@ print(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 print("Loaded model and tokenizer: predict classifier model")
 
 
-st.title("Automated ontology enchancement")
+st.title("Automated Ontology Enhancement")
 
 st.markdown("This prototype compares user's prompt with synonyms in the ontology to check if a new term could be a candidate for the ontology or if it is a synonym.")
 
