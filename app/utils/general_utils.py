@@ -56,7 +56,7 @@ def get_most_similar(new_term_embds, overall_embeddings, top_n=5):
     most_similar_words = list(sorted_similarity_scores.keys())[:top_n]
     return most_similar_words, sorted_similarity_scores
 
-def is_synonym(new_term, model, tokenizer, overall_embeddings, threshold=0.7):
+def is_synonym(new_term, model, tokenizer, overall_embeddings, threshold=0.7267):
     new_term_embds = get_embeddings([new_term], model, tokenizer)
     similarity_scores = {}
     for term, embedding in overall_embeddings.items():
