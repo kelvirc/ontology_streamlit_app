@@ -11,3 +11,5 @@
 **/tf_env/
 **/__pycache__/
 **/Archived
+**/app/data/hierarchichical_clustering/
+**/app/data/level_3_model/
