@@ -3,7 +3,7 @@ import torch
 import re
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
-with open('data/level_3_model/parent_to_label.json', 'r') as f:
+with open('app/data/level_3_model/parent_to_label.json', 'r') as f:
     parent_to_label = json.load(f)
 
 def predict_placement(model, tokenizer, term, device):

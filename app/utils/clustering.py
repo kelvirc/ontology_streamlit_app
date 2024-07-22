@@ -24,10 +24,10 @@ def load_train(filepath):
     embeddings_array = np.vstack(train_df["embeddings"].to_numpy())
     scaler = StandardScaler()
     embeddings_scaled = scaler.fit_transform(embeddings_array)
-    Z = load_pickle_model('data/hierarchical_clustering/Z_sci.pkl')
+    Z = load_pickle_model('app/data/hierarchical_clustering/Z_sci.pkl')
     return embeddings_scaled,Z, train_df,  
 
-embeddings_scaled, Z, train_df =  load_train('data/hierarchical_clustering/fv_train_df.csv')
+embeddings_scaled, Z, train_df =  load_train('app/data/hierarchical_clustering/fv_train_df.csv')
 
 embeddings_array = np.vstack(train_df["embeddings"].to_numpy())
 scaler = StandardScaler()

@@ -1,6 +1,7 @@
-streamlit
-scikit-learn
 transformers
+pandas
+numpy
+scikit-learn
+scipy
 torch
-tensorflow
-tensorboard
+streamlit

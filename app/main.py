@@ -29,7 +29,7 @@ def load_placement_classifier(file_path):
 
 @st.cache_data
 def load_ontology_parent():
-    df = pd.read_csv('data/ontology_parent_id.csv')
+    df = pd.read_csv('app/data/ontology_parent_id.csv')
     return df
 
 # Function to find the parent value based on cat_3
@@ -56,8 +56,8 @@ st.markdown(
 if 'setup_complete' not in st.session_state:
     with st.spinner('Wait for it...'):
         # Load precomputed embeddings
-        embeddings_ontology = load_ontology('data/embeddings_ontology.pkl')
-        embeddings_synonyms = load_synonyms('data/embeddings_synonyms.pkl')
+        embeddings_ontology = load_ontology('app/data/embeddings_ontology.pkl')
+        embeddings_synonyms = load_synonyms('app/data/embeddings_synonyms.pkl')
         # Merge all embeddings
         overall_embeddings = {**embeddings_ontology, **embeddings_synonyms}
         
@@ -66,7 +66,7 @@ if 'setup_complete' not in st.session_state:
         model, tokenizer = load_model_and_tokenizer(model_name)
 
         # Load Classifier model
-        predict_cmodel, predict_c_tokenizer = load_predict_placement_model('data/level_3_model')
+        predict_cmodel, predict_c_tokenizer = load_predict_placement_model('app/data/level_3_model')
         device = torch.device('cpu')
 
         # Save to session state
