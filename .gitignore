@@ -10,3 +10,4 @@
 .jupyter
 **/tf_env/
 **/__pycache__/
+**/Archived
