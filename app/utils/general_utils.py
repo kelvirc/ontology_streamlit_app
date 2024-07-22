@@ -22,7 +22,7 @@ def load_model_and_tokenizer(model_name):
     model.to(device)
     return model, tokenizer
 
-def get_embeddings(terms, model, tokenizer, max_length=512):
+def get_embeddings(terms, model, tokenizer, max_length=50): #512
     embeddings = {}
     for term in terms:
         if isinstance(term, list):
@@ -101,4 +101,20 @@ def load_pickle_model(file_path):
     with open(file_path, 'rb') as file:
         model = pickle.load(file)
     return model
+
+
+def ontology_parent_lookup(df, entity_id):
+    """
+    Function to find the parent value from a DataFrame given a category (cat_3).
+
+    Parameters:
+    df (pd.DataFrame): The DataFrame containing the data.
+    cat_3 (str): The category to search for in the 'ent_id' column.
+
+    Returns:
+    str: The corresponding parent value or 'UNKNOWN' if no match is found.
+    """
+    # Check for the match in the 'ent_id' column and return the 'parent' value or 'UNKNOWN'
+    parent_value = df['level_3'][df['ent_id'] == entity_id].values
+    return parent_value[0] if parent_value else "UNKNOWN"
     
