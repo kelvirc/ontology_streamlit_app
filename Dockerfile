@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . /app
 
 # Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install  -r requirements.txt
 
 # Make port 8503 available to the world outside this container
 EXPOSE 8599
@@ -18,3 +18,4 @@ ENV PORT 8599
 
 # Run streamlit when the container launches
 CMD ["streamlit", "run", "app/main.py", "--server.port", "8599"]
+
