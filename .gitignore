@@ -11,5 +11,3 @@
 **/tf_env/
 **/__pycache__/
 **/Archived
-app/data/hierarchical_clustering/fv_train_df.csv
-app/data/level_3_model/model.safetensors
