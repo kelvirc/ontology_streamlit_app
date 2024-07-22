@@ -9,3 +9,5 @@ services:
       - PORT=8599
     volumes:
       - .:/app
+      - /home/kelvir/ontology_models/model.safetensors:/app/data/level_3_model/model.safetensors
+      - /home/kelvir/ontology_models/hierarchical_clusteringfv_train_df.csv:/app/data/hierarchical_clustering/fv_train_df.csv
